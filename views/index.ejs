@@ -5,8 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/css/foundation.min.css' />
     <link rel='stylesheet' href='/stylesheets/css/normalize.css' />
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
     <link rel='stylesheet' href='/stylesheets/sweetalert-master/dist/sweetalert.css' />
-    <script>console.log('hello')</script>
+    <script>
+    console.log('items')
+    </script>
   </head>
   <body ng-app="clubApp">
     <nav class="top-bar" data-topbar role="navigation">
@@ -27,21 +30,21 @@
       <li class="has-dropdown">
         <a href="#">Username</a>
         <ul class="dropdown">
-          <li><a ui-sref="account">Account Info</a></li>
+          <li><a ui-sref="profile">{{user}}/'s Profile</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </li>
     </ul>
-
-    <!-- Left Nav Section -->
   </section>
 </nav>
+<br>
       <div ui-view></div>
     <script src="/javascripts/js/vendor/jquery.js"></script>
     <script src="/javascripts/js/vendor/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="/stylesheets/sweetalert-master/dist/sweetalert.min.js"></script>
+    <script src="http://js.arcgis.com/3.14/"></script>
     <script src="/javascripts/js/foundation.min.js"></script>
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/splash.js"></script>

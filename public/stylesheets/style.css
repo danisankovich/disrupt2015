@@ -6,4 +6,47 @@ body {
   border: 1px solid #ddd;
   margin: 100px 0;
   padding: 40px 20px 0 20px;
+
+.card {
+  border: 1px solid gray;
+  height: 500px !important;
+}
+
+.card-divider {
+  border: 1px solid gray;
+  background-color: gray;
+}
+
+.theItems {
+  padding: 5px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.esriStopsContainer {
+  margin-top: 45px !important;
+}
+
+#map_zoom_slider {
+  margin-top: 30px !important;
+}
+
+.top-bar {
+  z-index: 1 !important;
+}
+
+#addCollection {
+  width: 120px;
+  font-size: 18px;
+  padding: 0;
+}
+
+.card-section li{
+  display: block;
+>>>>>>> 4c80f6eeaee7668a78d2bb9ad26869ef59a7c607
 }
