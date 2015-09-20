@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 
 var authData;
-router.post('/login', function(req, res, next) {
+router.post('/login', function(req, result, next) {
   console.log(req);
   var username = req.body.username;
   var password = req.body.password;
@@ -33,13 +33,13 @@ router.post('/login', function(req, res, next) {
     var access_type = body.access_type;
     console.log(access_token, access_token);
     authData = access_type + " " + access_token;
-    request.get("http://localhost:8000/profile", function(err, res, body){
+    request.get("http://localhost:8000/profile", function(err, res, prefs){
       if(err){
         console.log(err);
       }
-      console.log("~~~~~~IN LOGIN~~~~~~", body);
+      console.log("~~~~~~IN LOGIN~~~~~~", prefs);
+      result.send(prefs);
     });
-    res.send(200);
   });
 });
 
@@ -55,15 +55,14 @@ router.get('/profile', function(req, res, next) {
     console.log(body);
     body = JSON.parse(body);
     console.log("profile_id: ", body.profile_id);
-    // curl -X GET --header "Accept: application/x.zalando.myfeed+json;version=2" --header "Authorization: User 83cdd68a-24e9-4efa-928b-99a7b538be64"
     request.get({
         url: "https://api.dz.zalan.do/customer-profiles/"+ body.profile_id +"/preferences",
         headers: {"Accept": "application/x.zalando.myfeed+json;version=2", "Authorization": authData}
-      }, function(err, res, preferences){
+      }, function(err, result, preferences){
       if(err){
         console.error(err);
       }
-      console.log("here are your preferences:", preferences);
+      res.send(preferences);
     });
   });
 });
