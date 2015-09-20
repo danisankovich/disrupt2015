@@ -1,14 +1,28 @@
     <script>
 
     $(document).ready(function() {
+      setTimeout(function() {
+          $('div.dijitDialogPaneActionBar').children().children().children().hide()
+      $('.dijit.dijitReset.dijitInline.esriIdSubmit.dijitButton').children().val('Login')
+      $('.dijit.dijitReset.dijitInline.esriIdCancel.dijitButton').children().val('Cancel')
+      }, 1000)
+      
+      // $(".dijitReset.dijitInputField.dijitValidationIcon.dijitValidationInner").hide()
+      // $("resLink").hide()
+      // $('.serverLink').text('the map')
       $('li').on('click', function() {
-        $('#esri_dijit_Search_2_input').val($(this).data("id"))
+        $('#esri_dijit_Search_2_input').val($(this).attr("data-id"))
         console.log($(this).data())
       });
+      // x[0].hide();
+      // x[2].hide();
+      // x[1].val("Login");
+      // x[3].val("Cancel");
+      // span dijitReset dijitInline dijitButtonNode
     });
 
     </script>
-
+<br><br><br><br>
     <button style="z-index: 1" href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Dropdown Button</button><br>
     <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
       <li data-id="540 Howard St San Francisco, CA 94105">Temple</li>
