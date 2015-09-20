@@ -1,6 +1,12 @@
     <script>
 
     $(document).ready(function() {
+      setTimeout(function() {
+          $('div.dijitDialogPaneActionBar').children().children().children().hide()
+      $('.dijit.dijitReset.dijitInline.esriIdSubmit.dijitButton').children().val('Login')
+      $('.dijit.dijitReset.dijitInline.esriIdCancel.dijitButton').children().val('Cancel')
+      }, 1000)
+      
       // $(".dijitReset.dijitInputField.dijitValidationIcon.dijitValidationInner").hide()
       // $("resLink").hide()
       // $('.serverLink').text('the map')
@@ -8,6 +14,11 @@
         $('#esri_dijit_Search_2_input').val($(this).attr("data-id"))
         console.log($(this).data())
       });
+      // x[0].hide();
+      // x[2].hide();
+      // x[1].val("Login");
+      // x[3].val("Cancel");
+      // span dijitReset dijitInline dijitButtonNode
     });
 
     </script>
