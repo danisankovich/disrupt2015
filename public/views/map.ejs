@@ -2,7 +2,8 @@
 
     $(document).ready(function() {
       $('li').on('click', function() {
-        $('#esri_dijit_Search_2_input').val("yes")
+        $('#esri_dijit_Search_2_input').val($(this).data("id"))
+        console.log($(this).data())
       });
     });
 
@@ -10,7 +11,12 @@
 
     <button style="z-index: 1" href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Dropdown Button</button><br>
     <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-      <li><a href="#">club.name</a></li>
+      <li data-id="540 Howard St San Francisco, CA 94105">Temple</li>
+      <li data-id="375 11th St San Francisco, CA 94103">Booty SF</li>
+      <li data-id="65 Post St San Jose, CA 95113">Splash</li>
+      <li data-id="119 Utah St San Francisco, CA 94103">Mighty</li>
+      <li data-id="444 Jessie St San Francisco, CA 94103">Ruby Skye</li>
+      <li data-id="420 Mason St San Francisco, CA 94102">Temple</li>
     </ul>
 
 
