@@ -18,3 +18,15 @@
   margin: 0;
   padding: 0;
 }
+
+.esriStopsContainer {
+  margin-top: 45px !important;
+}
+
+#map_zoom_slider {
+  margin-top: 30px !important;
+}
+
+.top-bar {
+  z-index: 1 !important;
+}

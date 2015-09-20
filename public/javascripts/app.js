@@ -14,6 +14,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('map', {
       url: '/map',
       templateUrl: 'views/map.ejs',
+      controller: 'mapCtrl'
     })
     .state('home', {
       url: '/',
@@ -94,4 +95,34 @@ app.controller('searchCtrl', function($scope, $state) {
     }
   ];
   console.log($scope.items);
+});
+
+
+app.controller('mapCtrl', function($scope) {
+
+var map;
+
+require(["esri/map", "dojo/domReady!"], function(Map) {
+  map = new Map("map", {
+    basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+    center: [-122.45, 37.75], // longitude, latitude
+    zoom: 13
+  });
+});
+
+require([
+  "esri/map",
+  "esri/dijit/Directions",
+  "dojo/parser",
+  "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
+  "dojo/domReady!"
+], function (Map, Directions, parser) {
+    // call the parser
+    parser.parse();
+    var directions = new Directions({
+  map: map
+}, "dir");
+directions.startup();
+    // additional code to create a map and directions widget
+});
 });
