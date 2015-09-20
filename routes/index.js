@@ -1,18 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var request = require("request");
-var mongoose = require('mongoose');
-var User = require("../models/userSchema.js");
+var mongoose = require("mongoose");
+// var User = require("./models/userSchema.js");
 /* GET home page. */
+var User = require("../models/userSchema");
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 
-var authData;
+var authData, username;
 router.post('/login', function(req, result, next) {
   console.log(req);
-  var username = req.body.username;
+  username = req.body.username;
   var password = req.body.password;
   console.log(username, password);
   request.get({
@@ -35,6 +36,12 @@ router.post('/login', function(req, result, next) {
     var access_type = body.access_type;
     console.log(access_token, access_token);
     authData = access_type + " " + access_token;
+    var user = new User({access_token: access_token, username: username}, function(err, doc){
+      if(err){
+        console.error();
+      }
+      console.log(doc);
+    });
     request.get("http://localhost:8000/profile", function(err, res, prefs){
       if(err){
         console.log(err);
@@ -58,7 +65,7 @@ router.get('/profile', function(req, res, next) {
     body = JSON.parse(body);
     console.log("profile_id: ", body.profile_id);
     request.get({
-        url: "https://api.dz.zalan.do/feeds/"+ body.profile_id +"/items",
+        url: "https://api.dz.zalan.do/feeds/"+ body.profile_id +"/items?limit=1",
         headers: {"Accept": "application/x.zalando.myfeed+json;version=2", "Authorization": authData}
       }, function(err, result, preferences){
       if(err){
