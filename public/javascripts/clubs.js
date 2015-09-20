@@ -1,5 +1,7 @@
 angular.module('clubApp')
 .controller("clubCtrl", function($scope, $http, $rootScope, $state){
+
+
   $scope.test = "club going UP!!";
 
   // $http.get("")

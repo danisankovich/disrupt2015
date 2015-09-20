@@ -6,7 +6,7 @@
       <div class="small-3 small-offset-5 large-3 large-offset-5 columns">
         <a href="#" data-reveal-id="myModal" class="radius button large" style="border: 1px solid white">Login</a>
       </div>
-      <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog" ng-hide="hideLogin">
         <form ng-submit="login(username, password)">
            <div class="row">
              <div class="large-12 columns">
