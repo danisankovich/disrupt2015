@@ -1,6 +1,8 @@
 angular.module('clubApp')
-.controller("clubCtrl", function($scope){
+.controller("clubCtrl", function($scope, $http){
   $scope.test = "club going UP!!";
+
+  // $http.get("")
 
   $scope.clubs = [
     {
@@ -55,6 +57,12 @@ angular.module('clubApp')
 
   $scope.addToFavoriteClubs = function(club){
     console.log(club);
-    // $http.post("/")
+    $http.post("/addToFavoriteClubs", {club: club})
+    .then(function(data){
+      console.log(data);
+    })
+    .catch(function(err){
+      console.error(err);
+    });
   };
 });

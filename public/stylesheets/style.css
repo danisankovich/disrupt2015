@@ -264,3 +264,15 @@ button, .button:hover, .button:active, .button:focus  {
 .overflowHide {
   overflow: hidden;
 }
+
+div#where-to {
+    text-align: center;
+}
+button#skipIt {
+    color: white;
+    float: right;
+    border-radius: 86px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 22px;
+}
