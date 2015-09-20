@@ -55,3 +55,34 @@ body {
 #buttoncenter {
   text-align: center;
 }
+
+
+.color {
+  background-color: blue;
+}
+
+.box {
+  border: 1px black solid;
+  height: 45vh;
+  margin-bottom: 10px;
+}
+.boxtwo {
+  border: 1px black solid;
+  height: 50vh;
+}
+
+.innerbox {
+  border-bottom: 3px solid black;
+}
+
+.sliderimg {
+  height: 200px;
+}
+
+.sliderimg img {
+  height: 200px;
+}
+
+.orbit-bullets {
+  margin-top: -10px !important;
+}
