@@ -54,8 +54,12 @@ router.get('/profile', function(req, res, next) {
     }
     console.log(body);
     body = JSON.parse(body);
-    // curl -X GET --header "Accept: application/x.zalando.myfeed+json;version=2" --header "Authorization: User 83cdd68a-24e9-4efa-928b-99a7b538be64" "https://api.dz.zalan.do/customer-profiles/83001065008/preferences"
-    request.get("https://api.dz.zalan.do/customer-profiles/"+ body.profile_id +"/preferences", function(err, res, preferences){
+    console.log("profile_id: ", body.profile_id);
+    // curl -X GET --header "Accept: application/x.zalando.myfeed+json;version=2" --header "Authorization: User 83cdd68a-24e9-4efa-928b-99a7b538be64"
+    request.get({
+        url: "https://api.dz.zalan.do/customer-profiles/"+ body.profile_id +"/preferences",
+        headers: {"Accept": "application/x.zalando.myfeed+json;version=2", "Authorization": authData}
+      }, function(err, res, preferences){
       if(err){
         console.error(err);
       }

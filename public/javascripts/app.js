@@ -40,7 +40,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   .state('about', {
     url: '/about',
     templateUrl: 'views/about.ejs',
-  })
+  });
 }]);
 
 app.controller('searchCtrl', function($scope, $state, $http) {
