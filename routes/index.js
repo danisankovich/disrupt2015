@@ -29,19 +29,13 @@ router.post('/login', function(req, result, next) {
       console.error(error);
       res.send(400);
     }
-    console.log(body);
+    console.log("first resoonse: ", body);
     body = JSON.parse(body);
     // console.log(body);
     var access_token = body.access_token;
     var access_type = body.access_type;
     console.log(access_token, access_token);
     authData = access_type + " " + access_token;
-    var user = new User({access_token: access_token, username: username}, function(err, doc){
-      if(err){
-        console.error();
-      }
-      console.log(doc);
-    });
     request.get("http://localhost:8000/profile", function(err, res, prefs){
       if(err){
         console.log(err);
@@ -51,7 +45,7 @@ router.post('/login', function(req, result, next) {
     });
   });
 });
-
+var returningUser;
 router.get('/profile', function(req, res, next) {
   console.log("~~~~~~~ in profile ~~~~~~~~");
   request.get({
@@ -63,17 +57,45 @@ router.get('/profile', function(req, res, next) {
     }
     // console.log(body);
     body = JSON.parse(body);
-    console.log("profile_id: ", body.profile_id);
+    console.log(body);
+    User.findOne({"profile.profile_id": body.profile_id}, function(err, doc){
+      if(doc){
+        console.log("RETURNING USER: ", doc);
+        doc.update({"authData": authData});
+        // res.send(doc);
+        returningUser = doc;
+      } else if (err){
+        console.error(err);
+      } else {
+        console.log("~~~~~~~~NEW USER FACTORY~~~~~~~");
+        var user = new User({profile: body, authData: authData});
+        user.save(function(err, doc){
+          if(err){
+            console.error();
+          }
+          console.log("SAVED USER: ", doc);
+          var savedUser = doc;
+        });
+      }
+    });
     request.get({
-        url: "https://api.dz.zalan.do/feeds/"+ body.profile_id +"/items?limit=1",
+        url: "https://api.dz.zalan.do/feeds/"+ body.profile_id +"/items?limit=3",
         headers: {"Accept": "application/x.zalando.myfeed+json;version=2", "Authorization": authData}
       }, function(err, result, preferences){
       if(err){
         console.error(err);
       }
-      res.send(preferences);
+      console.log('preferences: ', preferences);
+      preferences = JSON.parse(preferences);
+      res.send({preferences: preferences, authenticatedUser: returningUser || savedUser});
     });
   });
+});
+
+router.post("/addToFavoriteClubs", function(req, res, next){
+  console.log("adding to fave clubs: ", req.body);
+
+  res.send(200);
 });
 
 router.put("/updatePrefence", function(req, res, next){
