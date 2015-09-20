@@ -30,3 +30,13 @@
 .top-bar {
   z-index: 1 !important;
 }
+
+#addCollection {
+  width: 120px;
+  font-size: 18px;
+  padding: 0;
+}
+
+.card-section li{
+  display: block;
+}
