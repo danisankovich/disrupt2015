@@ -16,7 +16,7 @@ body {
 
 .card.clothes {
   border: 1px solid gray;
-  height: 500px !important;
+  height: 450px !important;
   box-shadow: 5px 5px 5px #888888;
   padding: 1px;
 }
@@ -30,6 +30,7 @@ body {
 .card-divider h2 {
   color: white;
   font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
 }
 
 .theClubs {
@@ -299,5 +300,8 @@ a i {
 }
 
 .iconer {
+  margin-top: -5px;
+}
+.iconer2 {
   margin-top: -5px;
 }

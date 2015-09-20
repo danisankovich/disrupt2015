@@ -10,7 +10,7 @@
       <div ng-repeat="item in items" class='theItems small-6 large-3 columns'>
         <div class="card clothes">
           <div class="front">
-            <img src="http://placekitten.com/g/400/200" style="height: 280px;">
+            <img src="{{item.img}}" style="height: 280px;">
           </div>
           <div class="back">
           <div class="card-divider">
@@ -18,13 +18,15 @@
           </div>
           <div class="card-section">
             <div class="small-11 large-11 columns" style="text-align: center;">
+              <br>
               <ul>
-                <li>{{item.style}}</li>
-                <li>{{item.brands}}</li>
-                <li>{{item.compitem}}</li>
+                <li>Style: {{item.style}}</li>
+                <li>Brand: {{item.brands}}</li>
               </ul>
-              <div id="buttoncenter">
-                <button id="addCollection" class="button radius alert" ng-click="addToCollection">Add To Collection</button>
+            </div>
+              <div class="iconer2">
+                <a href="#" class="right"><i class="fi-share"></i></a>
+                <a ng-click="favorite()" class="right"><i class="fi-heart"></i></a>
               </div>
             </div>
           </div>
@@ -32,5 +34,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
