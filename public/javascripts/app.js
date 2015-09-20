@@ -14,12 +14,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('map', {
       url: '/map',
       templateUrl: 'views/map.ejs',
+    })
+    .state('splash', {
+      url: '/splash',
+      templateUrl: 'views/splash.html',
+      controller: 'splashCtrl'
     });
-    // .state('home', {
-    //   url: '/home',
-    //   templateUrl: 'views/home.ejs',
-    //   controller: 'dashboardCtrl'
-    // })
     // .state('login', {
     //   url: '/login',
     //   templateUrl: 'views/login.ejs',
