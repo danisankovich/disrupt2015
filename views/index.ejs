@@ -24,13 +24,13 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li ng-hide="true"><a ui-sref="dashboard">{{currentUser.userName}}</a></li>
       <li><a ui-sref="about">About</a></li>
+      <li><a ui-sref="mycollection">My Collection</a></li>
+      <li><a ui-sref="myclubs">My Clubs</a></li>
       <li><a ui-sref="search">Search</a></li>
       <li class="has-dropdown">
         <a href="#">Username</a>
         <ul class="dropdown">
-          <li><a ui-sref="profile">{{user}}/'s Profile</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </li>

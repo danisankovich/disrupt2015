@@ -6,6 +6,7 @@ body {
   border: 1px solid #ddd;
   margin: 100px 0;
   padding: 40px 20px 0 20px;
+}
 
 .card {
   border: 1px solid gray;
@@ -15,6 +16,7 @@ body {
 .card-divider {
   border: 1px solid gray;
   background-color: gray;
+  text-align: center;
 }
 
 .theItems {
@@ -48,5 +50,8 @@ body {
 
 .card-section li{
   display: block;
->>>>>>> 4c80f6eeaee7668a78d2bb9ad26869ef59a7c607
+}
+
+#buttoncenter {
+  text-align: center;
 }

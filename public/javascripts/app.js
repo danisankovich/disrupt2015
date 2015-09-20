@@ -34,9 +34,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       templateUrl: 'views/search.ejs',
       controller: 'searchCtrl'
     })
-    .state('profile', {
-      url: '/profile',
-      templateUrl: 'views/profile.ejs',
+    .state('mycollection', {
+      url: '/mycollection',
+      templateUrl: 'views/mycollection.ejs',
+      // controller: 'aboutCtrl'
+    })
+    .state('myclubs', {
+      url: '/myclubs',
+      templateUrl: 'views/myclubs.ejs',
       // controller: 'aboutCtrl'
     })
     .state('about', {
@@ -97,6 +102,9 @@ app.controller('searchCtrl', function($scope, $state) {
     }
   ];
   console.log($scope.items);
+  var addToCollection = function() {
+    console.log($scope.items);
+  };
 });
 
 
@@ -128,4 +136,3 @@ directions.startup();
     // additional code to create a map and directions widget
 });
 });
-
