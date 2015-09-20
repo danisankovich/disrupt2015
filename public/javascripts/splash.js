@@ -7,7 +7,7 @@ angular.module('clubApp')
     $http.post("/login", loginInfo)
     .then(function(data){
       console.log(data);
-      $state.go("profile");
+      // $state.go("profile");
     })
     .catch(function(err){
       console.error(err);
