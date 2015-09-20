@@ -5,7 +5,7 @@ angular.module('clubApp')
   $scope.clubs = [
     {
       name: "Bootie SF",
-      overview: "Bootie-SF is a classic SF scene and among the best places to go out dancing in the city",
+      overview: "VOTED 'BEST DANCE CLUB'/'BEST CLUB THEME NIGHT'/'BEST EVENT PRODUCERS' FOR EIGHT YEARS IN A ROW!",
       phoneNumber: "###-###-####",
       address: 'DNA Lounge 375 11th St San Francisco, CA 94103',
       url: 'http://bootiemashup.com/sf/',
@@ -13,10 +13,10 @@ angular.module('clubApp')
     },
     {
       name: "Splash",
-      overview: "Splash is the South Bay’s Premiere Gay Nightclub. With 2 levels of dancing, rooftop smoking patio, over 20 video screens, Splash is San Jose’s new destination for Gay Nightlife.",
+      overview: "With 2 levels of dancing, rooftop smoking patio, over 20 video screens, Splash is San Jose’s new destination for Gay Nightlife.",
       phoneNumber: "408-292-2222",
       address: '65 Post St San Jose, CA 95113',
-      url: 'splashsj.com',
+      url: 'http://splashsj.com',
       image: 'http://www.splashsj.com/assets/SplashSlide2.jpg'
     },
     {
@@ -24,12 +24,12 @@ angular.module('clubApp')
       overview: "Mighty is a virtual warehouse of party action. In its short life, it’s already become one of the hottest places in the city to hear top-notch international DJs.",
       phoneNumber: "415-626-7001",
       address: '119 Utah St San Francisco, CA 94103',
-      url: 'mighty119.com',
+      url: 'http://mighty119.com',
       image: 'http://cdn.partyearth.com/photos/de514c9834e05a92cbdf0d6e787442aa/mighty-nightclub_s345x230.jpg?1375046361'
     },
     {
       name: "Mezzanine",
-      overview: "Mezzanine is San Francisco’s premiere live music venue, nightclub, and event space, showcasing DJs and live performances from some of the newest, most talented artists in music, and hosting performances that span all genres – from Indie-rock to R&B, Nu-disco to New Orleans Brass.",
+      overview: "Mezzanine is San Francisco’s premiere live music venue, nightclub, and event space, showcasing DJs and live performances.",
       phoneNumber: "415-625-8880",
       address: '444 Jessie St San Francisco, CA 94103',
       url: 'mezzaninesf.com',
@@ -52,4 +52,9 @@ angular.module('clubApp')
       image: 'http://www.rubyskye.com/_media/ruby_skye_photo1.jpg'
     },
   ];
+
+  $scope.addToFavoriteClubs = function(club){
+    console.log(club);
+    // $http.post("/")
+  };
 });

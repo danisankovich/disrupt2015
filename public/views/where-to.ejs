@@ -6,9 +6,9 @@
         <h4>{{club.name}}</h4>
         <p>{{club.overview}}</p>
         <p>
-          <a href="club.url">learn more</a>
+          <a href="{{club.url}}">learn more</a>
           <a href="#" class="right"><i class="fi-share"></i></a>
-          <a href="#" class="right"><i class="fi-heart"></i></a>
+          <a ng-click="addToFavoriteClubs(club)"  class="right"><i class="fi-heart"></i></a>
         </p>
       </div>
     </article>
