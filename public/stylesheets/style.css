@@ -290,7 +290,6 @@ button, .button:hover, .button:active, .button:focus  {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 div#where-to {
     text-align: center;
 }
@@ -301,7 +300,7 @@ button#skipIt {
     width: 200px;
     font-size: 22px;
     line-height: 22px;
-=======
+}
 a i {
   font-weight: 300;
   color: #757D75;
@@ -313,7 +312,6 @@ a i {
 
 .iconer {
   margin-top: -5px;
->>>>>>> 3cbbd0fb67b3bb345e0038d7117297dc64a1bd6d
 }
 .iconer2 {
   margin-top: -5px;
