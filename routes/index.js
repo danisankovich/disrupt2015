@@ -56,7 +56,7 @@ router.get('/profile', function(req, res, next) {
     body = JSON.parse(body);
     console.log("profile_id: ", body.profile_id);
     request.get({
-        url: "https://api.dz.zalan.do/customer-profiles/"+ body.profile_id +"/preferences",
+        url: "https://api.dz.zalan.do/feeds/"+ body.profile_id +"/items",
         headers: {"Accept": "application/x.zalando.myfeed+json;version=2", "Authorization": authData}
       }, function(err, result, preferences){
       if(err){
@@ -66,6 +66,11 @@ router.get('/profile', function(req, res, next) {
     });
   });
 });
-// curl -X GET --header "Accept: application/x.zalando.myfeed+json;version=2" --header "Authorization: User 846yeerf-d4cq-4903-9hc8-f0f034fed1bb" "https://api.dz.zalan.do/customer-profiles/1226542314"
+
+router.put("/updatePrefence", function(req, res, next){
+  console.log(req.body);
+});
+
+// "type":"brand" || "article", key: "some string";
 
 module.exports = router;
