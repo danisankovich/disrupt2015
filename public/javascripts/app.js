@@ -7,6 +7,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   .state('map', {
     url: '/map',
     templateUrl: 'views/map.ejs',
+    controller: 'mapCtrl'
   })
   .state('splash', {
     url: '/splash',
@@ -102,7 +103,6 @@ app.controller('searchCtrl', function($scope, $state, $http) {
 app.controller('mapCtrl', function($scope) {
 
   var map;
-
   require(["esri/map", "dojo/domReady!"], function(Map) {
     map = new Map("map", {
       basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
@@ -110,7 +110,6 @@ app.controller('mapCtrl', function($scope) {
       zoom: 13
     });
   });
-
   require([
     "esri/map",
     "esri/dijit/Directions",
