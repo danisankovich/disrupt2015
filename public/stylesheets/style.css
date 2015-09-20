@@ -11,6 +11,7 @@ body {
 .card {
   border: 1px solid gray;
   height: 500px !important;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .card-divider {
@@ -35,7 +36,7 @@ body {
 }
 
 #map_zoom_slider {
-  margin-top: 30px !important;
+  margin-top: 40px !important;
 }
 
 .top-bar {
@@ -212,4 +213,17 @@ button, .button  {
 button, .button:hover, .button:active, .button:focus  {
   background-color: black;
   border-color: black;
+}
+
+.dijitDialogPaneContentArea {
+  background-color: white !important;
+  margin-top: 20px;
+}
+
+#dijit_Dialog_0 {
+  background-color: white !important;
+}
+
+.dijitReset.dijitInputField.dijitValidationIcon.dijitValidationInner {
+  display: none !important;
 }
