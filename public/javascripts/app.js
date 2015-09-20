@@ -19,6 +19,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       url: '/splash',
       templateUrl: 'views/splash.html',
       controller: 'splashCtrl'
+    })
+    .state('where-to', {
+      url: '/where-to',
+      templateUrl: 'views/where-to.html',
+      controller: 'clubCtrl'
     });
     // .state('login', {
     //   url: '/login',
