@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <h1>Clubs</h1>
+
+
+          <div class="small-12 large-12 columns">
+            <div ng-repeat="club in clubs" class='theClubs small-6 large-3 columns'>
+              <div class="card">
+                <div class="front">
+                  <img src="http://placekitten.com/g/400/200" style="height: 280px;">
+                </div>
+                <div class="back">
+                <div class="card-divider">
+                  <h2>{{club.name}}</h2>
+                </div>
+                <div class="card-section">
+                  <div class="small-11 large-11 columns" style="text-align: center;">
+                    <ul>
+                      <li>{{club.address}}</li>
+                      <li>{{club.phoneNumber}}</li>
+                      <li>{{club.url}}</li>
+                    </ul>
+                    <div id="buttoncenter">
+                      <button id="addCollection" class="button radius alert" ng-click="addToCollection">Add To Collection</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>
