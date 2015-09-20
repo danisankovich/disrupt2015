@@ -95,18 +95,18 @@ router.get('/profile', function(req, res, next) {
 router.post("/addToFavoriteClubs", function(req, res, next){
   console.log("adding to fave clubs: ", req.body);
   var profile_id = req.body.data.authenticatedUser.profile.profile_id;
-  console.log("CLUB CLUB CLUB: ", req.body.club);
+  var club = req.body.club;
   User.findOneAndUpdate(
       {"profile.profile_id": profile_id},
-      {$push: {"favoriteClubs": req.body.favoriteClubs}},
+      {$push: {"favoriteClubs": club}},
       {safe: true, upsert: true},
-      function(err, doc) {
-          if(err){
-            console.error(err);
-          }
-          console.log("favorited club doc: ", doc);
-          res.send(doc);
-      });
+      function(err, doc){
+        if(err){
+          console.error(err);
+        }
+        console.log("favorite found doc: ", doc);
+      }
+    );
 });
 
 router.put("/updatePrefence", function(req, res, next){

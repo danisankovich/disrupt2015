@@ -60,14 +60,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-// User.findOne({"profile_id": profile_id}, function(err, doc){
-//   if(err){
-//     console.error(err);
-//   }
-//   console.log("USER ADDING TO FAVES: ", doc);
-//   doc.update("favoriteClubs", {$push: { 'sent-messages' : delivered }},{upsert:true}, function(err, data){
-//     if(err){
-//
-//     }
-//   });
-// });

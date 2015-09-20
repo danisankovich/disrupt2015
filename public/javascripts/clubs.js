@@ -1,5 +1,5 @@
 angular.module('clubApp')
-.controller("clubCtrl", function($scope, $http, $rootScope){
+.controller("clubCtrl", function($scope, $http, $rootScope, $state){
   $scope.test = "club going UP!!";
 
   // $http.get("")
@@ -73,5 +73,9 @@ angular.module('clubApp')
     .catch(function(err){
       console.error(err);
     });
+  };
+
+  $scope.skip = function (){
+    $state.go('search');
   };
 });
