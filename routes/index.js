@@ -45,7 +45,7 @@ router.post('/login', function(req, result, next) {
     });
   });
 });
-var returningUser;
+var returningUser, savedUser;
 router.get('/profile', function(req, res, next) {
   console.log("~~~~~~~ in profile ~~~~~~~~");
   request.get({
@@ -74,7 +74,7 @@ router.get('/profile', function(req, res, next) {
             console.error();
           }
           console.log("SAVED USER: ", doc);
-          var savedUser = doc;
+          savedUser = doc;
         });
       }
     });
@@ -95,6 +95,7 @@ router.get('/profile', function(req, res, next) {
 router.post("/addToFavoriteClubs", function(req, res, next){
   console.log("adding to fave clubs: ", req.body);
   var profile_id = req.body.data.authenticatedUser.profile.profile_id;
+  console.log("CLUB CLUB CLUB: ", req.body.club);
   User.findOneAndUpdate(
       {"profile.profile_id": profile_id},
       {$push: {"favoriteClubs": req.body.favoriteClubs}},
