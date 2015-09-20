@@ -72,19 +72,43 @@ body {
 }
 
 .innerbox {
+  padding: 10px;
   border-bottom: 3px solid black;
+  font-size: 1.5em;
 }
 
 .sliderimg {
   height: 200px;
 }
-
+/*
 .sliderimg img {
-  height: 200px;
+  height: 100%;
+}*/
+
+.orbit-container img {
+    display: block;
+    max-width: 100%;
 }
 
-.orbit-bullets {
-  margin-top: -10px !important;
+.orbit-bullets li {
+    background: #CCCCCC;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 0.5625rem;
+    margin-right: 6px;
+    width: 0.5625rem;
+    border-radius: 1000px;
+}
+
+.orbit-caption {
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  padding: 0.625rem 0.875rem;
+  width: 100%;
 }
 
 .card {
@@ -212,4 +236,9 @@ button, .button  {
 button, .button:hover, .button:active, .button:focus  {
   background-color: black;
   border-color: black;
+}
+
+
+.texture {
+  background-image: url("../img/texture.png");
 }
