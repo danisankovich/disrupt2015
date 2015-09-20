@@ -1,5 +1,5 @@
 angular.module('clubApp')
-.controller('splashCtrl', function($scope, $http, $state){
+.controller('loginCtrl', function($scope, $http, $state){
   $scope.test = "hi";
   $scope.login = function(u, p){
     console.log(u, p);

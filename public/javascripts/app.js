@@ -9,11 +9,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: 'views/map.ejs',
     controller: 'mapCtrl'
   })
-  .state('splash', {
-    url: '/splash',
-    templateUrl: 'views/splash.ejs',
-    controller: 'splashCtrl'
-  })
   .state('where-to', {
     url: '/where-to',
     templateUrl: 'views/where-to.ejs',
@@ -22,6 +17,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   .state('home', {
     url: '/',
     templateUrl: 'views/home.ejs',
+    controller: 'loginCtrl',
   })
   .state('search', {
     url: '/search',
