@@ -4,7 +4,8 @@ angular.module('clubApp')
 
   $scope.clubs = [
     {
-      name: "Booty SF",
+      name: "Bootie SF",
+      overview: "Bootie-SF is a classic SF scene and among the best places to go out dancing in the city",
       phoneNumber: "###-###-####",
       address: 'DNA Lounge 375 11th St San Francisco, CA 94103',
       url: 'http://bootiemashup.com/sf/',
@@ -12,6 +13,7 @@ angular.module('clubApp')
     },
     {
       name: "Splash",
+      overview: "Splash is the South Bay’s Premiere Gay Nightclub. With 2 levels of dancing, rooftop smoking patio, over 20 video screens, Splash is San Jose’s new destination for Gay Nightlife.",
       phoneNumber: "408-292-2222",
       address: '65 Post St San Jose, CA 95113',
       url: 'splashsj.com',
@@ -19,6 +21,7 @@ angular.module('clubApp')
     },
     {
       name: "Mighty",
+      overview: "Mighty is a virtual warehouse of party action. In its short life, it’s already become one of the hottest places in the city to hear top-notch international DJs.",
       phoneNumber: "415-626-7001",
       address: '119 Utah St San Francisco, CA 94103',
       url: 'mighty119.com',
@@ -26,6 +29,7 @@ angular.module('clubApp')
     },
     {
       name: "Mezzanine",
+      overview: "Mezzanine is San Francisco’s premiere live music venue, nightclub, and event space, showcasing DJs and live performances from some of the newest, most talented artists in music, and hosting performances that span all genres – from Indie-rock to R&B, Nu-disco to New Orleans Brass.",
       phoneNumber: "415-625-8880",
       address: '444 Jessie St San Francisco, CA 94103',
       url: 'mezzaninesf.com',
@@ -33,6 +37,7 @@ angular.module('clubApp')
     },
     {
       name: "Temple",
+      overview: "A venue for artists, by artists, #TheNewTemple offers awe-inspiring, fully immersive state of the art lighting and visuals, a thumping custom sound system, multiple rooms of music, and with world-class talent.",
       phoneNumber: "415-312-3668",
       address: '540 Howard St San Francisco, CA 94105',
       url: 'templesf.com',
@@ -40,6 +45,7 @@ angular.module('clubApp')
     },
     {
       name: "Ruby Skye",
+      overview: "This impeccably appointed space is perfect setting for launch parties, wedding and receptions, benefits and fashion shows. The possibilities are endless for entertaining in this unique, and upscale entertainment venue.",
       phoneNumber: "628-400-4688",
       address: '420 Mason St San Francisco, CA 94102',
       url: 'rubyskye.com',
