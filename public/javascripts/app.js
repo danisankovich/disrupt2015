@@ -36,7 +36,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   .state('clubs', {
     url: '/clubs',
     templateUrl: 'views/clubs.ejs',
-    // controller: 'aboutCtrl'
+    controller: 'clubCtrl'
   })
   .state('about', {
     url: '/about',

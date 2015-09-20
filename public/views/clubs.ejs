@@ -5,12 +5,11 @@
 
 
           <div class="small-12 large-12 columns">
-            <div ng-repeat="club in clubs" class='theClubs small-6 large-3 columns'>
+            <div ng-repeat="club in clubs" class='theClubs small-6 large-4 columns'>
               <div class="card">
-                <div class="front">
+                <div>
                   <img src="http://placekitten.com/g/400/200" style="height: 280px;">
                 </div>
-                <div class="back">
                 <div class="card-divider">
                   <h2>{{club.name}}</h2>
                 </div>
@@ -22,7 +21,7 @@
                       <li>{{club.url}}</li>
                     </ul>
                     <div id="buttoncenter">
-                      <button id="addCollection" class="button radius alert" ng-click="addToCollection">Add To Collection</button>
+                      <button id="addCollection" class="button radius alert" ng-click="addToCollection">Favorite</button>
                     </div>
                   </div>
                 </div>
