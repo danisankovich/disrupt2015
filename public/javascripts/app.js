@@ -11,12 +11,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   })
   .state('splash', {
     url: '/splash',
-    templateUrl: 'views/splash.html',
+    templateUrl: 'views/splash.ejs',
     controller: 'splashCtrl'
   })
   .state('where-to', {
     url: '/where-to',
-    templateUrl: 'views/where-to.html',
+    templateUrl: 'views/where-to.ejs',
     controller: 'clubCtrl'
   })
   .state('home', {
