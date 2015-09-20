@@ -172,3 +172,45 @@ body {
       width: 3rem;
       border-radius: 50%;
       margin-top: -3rem; }
+=======
+
+.hero {
+  background: url("../img/splash2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+.hero .intro {
+  padding: 3rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero h1 {
+  color: #fff;
+  font-size: 5rem;
+  line-height: 1.5em;
+  letter-spacing: -0.025em;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.hero h2 {
+  color: #fff;
+  line-height: 1.75em;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 2rem;
+    text-shadow: 2px 2px #000;
+}
+
+button, .button  {
+  background-color: black;
+  border-color: black;
+}
+
+button, .button:hover, .button:active, .button:focus  {
+  background-color: black;
+  border-color: black;
+}
