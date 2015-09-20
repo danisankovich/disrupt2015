@@ -34,4 +34,9 @@ router.post('/login', function(req, res, next) {
   request.get(options, callback);
 });
 
+router.get('/search', function(res, req, next) {
+  'https://api.zalando.com/articles';
+});
+
+
 module.exports = router;

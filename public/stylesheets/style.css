@@ -55,3 +55,22 @@ body {
 #buttoncenter {
   text-align: center;
 }
+
+
+.color {
+  background-color: blue;
+}
+
+.box {
+  border: 1px black solid;
+  height: 20vh;
+  margin-bottom: 10px;
+}
+.boxtwo {
+  border: 1px black solid;
+  height: 85vh;
+}
+
+.innerbox {
+  border-bottom: 3px solid black;
+}
