@@ -28,16 +28,16 @@ angular.module('clubApp')
       url: 'mezzaninesf.com',
     },
     {
-      name: "A",
-      phoneNumber: "###-###-####",
-      address: 'DNA Lounge 375 11th St San Francisco, CA 94103',
-      url: 'http://bootiemashup.com/sf/',
+      name: "Temple",
+      phoneNumber: "415-312-3668",
+      address: '540 Howard St San Francisco, CA 94105',
+      url: 'templesf.com',
     },
     {
-      name: "A",
-      phoneNumber: "###-###-####",
-      address: 'DNA Lounge 375 11th St San Francisco, CA 94103',
-      url: 'http://bootiemashup.com/sf/',
+      name: "Ruby Skye",
+      phoneNumber: "628-400-4688",
+      address: '420 Mason St San Francisco, CA 94102',
+      url: 'rubyskye.com',
     },
   ];
 });
