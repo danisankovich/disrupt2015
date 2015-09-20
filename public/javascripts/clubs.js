@@ -39,7 +39,7 @@ angular.module('clubApp')
     },
     {
       name: "Temple",
-      overview: "A venue for artists, by artists, #TheNewTemple offers awe-inspiring, fully immersive state of the art lighting and visuals, a thumping custom sound system, multiple rooms of music, and with world-class talent.",
+      overview: "#TheNewTemple offers awe-inspiring, fully immersive lighting and visuals, a custom sound system, multiple rooms of music, and world-class talent.",
       phoneNumber: "415-312-3668",
       address: '540 Howard St San Francisco, CA 94105',
       url: 'templesf.com',
@@ -47,13 +47,21 @@ angular.module('clubApp')
     },
     {
       name: "Ruby Skye",
-      overview: "This impeccably appointed space is perfect setting for launch parties, wedding and receptions, benefits and fashion shows. The possibilities are endless for entertaining in this unique, and upscale entertainment venue.",
+      overview: "This impeccably appointed space is perfect setting for launch parties, receptions, benefits, and fashion shows. The possibilities are endless in this unique, and upscale venue.",
       phoneNumber: "628-400-4688",
       address: '420 Mason St San Francisco, CA 94102',
       url: 'rubyskye.com',
       image: 'http://www.rubyskye.com/_media/ruby_skye_photo1.jpg'
     },
   ];
+
+  $scope.favorite = function() {
+    sweetAlert({
+	     title: "Success!",
+       text: "Club has been added to your favorites!",
+       type: "success"
+     });
+   };
 
   $scope.addToFavoriteClubs = function(club){
     console.log(club);

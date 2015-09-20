@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h1>Clubs</h1>
-
-
+<br>
+<br>
           <div class="small-12 large-12 columns">
             <div ng-repeat="club in clubs" class='theClubs small-6 large-4 columns overflowHide'>
               <div class="card">
@@ -16,13 +15,16 @@
                 <div class="card-section">
                   <div class="small-11 large-11 columns" style="text-align: center;">
                     <ul>
+                      <li>Address:</li>
                       <li>{{club.address}}</li>
+                      <li>Phone Number: </li>
                       <li>{{club.phoneNumber}}</li>
-                      <li>{{club.url}}</li>
+                      <li><a href="{{club.url}}">Club Website</a></li>
                     </ul>
-                    <div id="buttoncenter">
-                      <button id="addCollection" class="button radius alert" ng-click="addToCollection">Favorite</button>
-                    </div>
+                      <div class="iconer">
+                        <a href="#" class="right"><i class="fi-share"></i></a>
+                        <a ng-click="favorite()" class="right"><i class="fi-heart"></i></a>
+                      </div>
                   </div>
                 </div>
               </div>
