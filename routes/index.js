@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require("request");
+var User = require("../models/userSchema.js");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -28,7 +29,7 @@ router.post('/login', function(req, result, next) {
     }
     console.log(body);
     body = JSON.parse(body);
-    console.log(body);
+    // console.log(body);
     var access_token = body.access_token;
     var access_type = body.access_type;
     console.log(access_token, access_token);
@@ -52,7 +53,7 @@ router.get('/profile', function(req, res, next) {
     if(error){
       console.error(error);
     }
-    console.log(body);
+    // console.log(body);
     body = JSON.parse(body);
     console.log("profile_id: ", body.profile_id);
     request.get({
