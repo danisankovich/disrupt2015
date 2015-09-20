@@ -2,12 +2,12 @@
   <div class="row">
     <div class='small-12 large-12 columns'>
       <div class="small-6 large-6 columns small-offset-3 large-offset-3">
-        <input type="text" placeholder="Search for type of clothing">
+        <label>Search: <input ng-model="searchText"></label>
       </div>
     </div>
 
     <div class="small-12 large-12 columns">
-      <div ng-repeat="item in items" class='theItems small-6 large-3 columns'>
+      <div ng-repeat="item in items| filter:searchText" class='theItems small-6 large-3 columns'>
         <div class="card clothes">
           <div class="front">
             <img src="{{item.img}}" style="height: 280px;">

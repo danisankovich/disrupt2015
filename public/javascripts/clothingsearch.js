@@ -58,6 +58,14 @@ angular.module('clubApp')
       compitem: 'those shirts'
     }
   ];
+
+  $scope.favorite = function() {
+    sweetAlert({
+       title: "Success!",
+       text: "Club has been added to your favorites!",
+       type: "success"
+     });
+   };
   console.log($scope.items);
   var addToCollection = function() {
     console.log($scope.items);
