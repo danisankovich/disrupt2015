@@ -79,6 +79,18 @@ app.controller('searchCtrl', function($scope, $state) {
       style: 'awesome',
       brands: 'expensive ones',
       compitem: 'those shirts'
+    },
+    {
+      name: 'leggings',
+      style: 'awesome',
+      brands: 'expensive ones',
+      compitem: 'those shirts'
+    },
+    {
+      name: 'leggings',
+      style: 'awesome',
+      brands: 'expensive ones',
+      compitem: 'those shirts'
     }
   ];
   console.log($scope.items);

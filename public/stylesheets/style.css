@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid gray;
+  height: 500px !important;
+}
+
+.card-divider {
+  border: 1px solid gray;
+  background-color: gray;
+}
+
+.theItems {
+  padding: 5px;
+}
