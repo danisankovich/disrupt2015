@@ -22,10 +22,10 @@ angular.module('clubApp')
       url: 'mighty119.com',
     },
     {
-      name: "A",
-      phoneNumber: "###-###-####",
-      address: 'DNA Lounge 375 11th St San Francisco, CA 94103',
-      url: 'http://bootiemashup.com/sf/',
+      name: "Mezzanine",
+      phoneNumber: "415-625-8880",
+      address: '444 Jessie St San Francisco, CA 94103',
+      url: 'mezzaninesf.com',
     },
     {
       name: "A",
